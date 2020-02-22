@@ -7,12 +7,28 @@ root = tk.Tk()
 
 apps = []
 
+'''
+adding the app
+'''
 def addApp():
+    for widget in frame.winfo_children():
+        widget.destroy()
+        
     filename = filedialog.askopenfilename(initialdir="/", title="Select File",
                                       filetypes=(("executetables", "*.exe"), ("all files", "*.*")))
     apps.append(filename)
-    print(filename)
+    # print(filename)
 
+    for app in apps:
+        label = tk.Label(frame, text=app, bg="grey")
+        label.pack()
+
+'''
+Running the app
+'''
+def runApps():
+    for app in apps:
+       os.startfile(app) 
 
 '''
 # for linux or MacOS
@@ -41,7 +57,7 @@ openFile.pack()
 
 # Button for running apps 
 RunApps = tk.Button(root, text="Run Apps", padx=10, 
-                    pady=5, fg="white", bg="red")
+                    pady=5, fg="white", bg="red", command=runApps)
 RunApps.pack()
 
 root.mainloop()
