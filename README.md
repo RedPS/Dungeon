@@ -1,14 +1,17 @@
 # Dungeon
 
-A Python GUI app that let's you store all your favorite programs in one place. 
+A Python GUI app that let's you store all your favorite programs in one place and run them at the same time. 
+
+This will be useful if you have a set environment that you work with and would like to start everything with one click as soon as you turn on your computer. 
 
 Current version 
 ```
-
+0.1
 ```
 
 Functionalities
-* TBD 
-* TBD 
+* Adding apps
+* Running apps
 * TBD
- 
+* TBD
+* TBD
