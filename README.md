@@ -6,12 +6,15 @@ This will be useful if you have a set environment that you work with and would l
 
 Current version 
 ```
-0.1
+0.2
 ```
 
 Functionalities
 * Adding apps
 * Running apps
-* TBD
-* TBD
-* TBD
+* Saving apps
+
+To be added
+* Icon for apps
+* Remove apps 
+
