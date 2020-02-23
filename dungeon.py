@@ -4,9 +4,15 @@ import os
 
 # the body, the whole structure 
 root = tk.Tk()
-
 apps = []
 
+if os.path.isfile('save.txt'):
+    with open('save.txt', 'r') as f:
+        tempApps = f.read()
+        # print(tempApps)
+        tempApps = tempApps.split(',')
+        # print(tempApps)
+        apps = [x for x in tempApps if x.strip()]
 '''
 adding the app
 '''
@@ -60,4 +66,12 @@ RunApps = tk.Button(root, text="Run Apps", padx=10,
                     pady=5, fg="white", bg="red", command=runApps)
 RunApps.pack()
 
+for app in apps:
+    label = tk.Label(frame, text=app)
+    label.pack()
+
 root.mainloop()
+
+with open('save.txt', 'w') as f:
+    for app in apps:
+        f.write(app+',')
